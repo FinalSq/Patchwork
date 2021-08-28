@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Chris Hartsell</title>
+    <title>Patchwork: A Coding Project By Chris Hartsell</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/img/LogoOnlyTransparentPNG.png" alt="Chris Hartsell Logo" height="45">
-                APP NAME
+                Patchwork
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                         <a class="nav-link" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/FinalSq/Patchwork.git">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://hartsell-portfolio.netlify.app">About</a>
@@ -59,7 +59,54 @@
     <!-- Main -->
     <main class="flex-shrink-0">
         <div class="container">
-
+            <div class="row row-cols-1 row-cols-md-2 mt-5">
+                <!-- Left Column -->
+                <div class="col">
+                    <div>
+                        <h1>Patchwork: A Coding Project</h1>
+                        <p>Piece it together with Patchwork! A javascript coding exercise using loops.
+                            Write a program that prints the numbers from 1 to 100 and for multiples of
+                            <strong>3</strong> display <strong>"Patch"</strong> instead of the number.
+                            For multiples of <strong>5</strong> display <strong>"work"</strong>.
+                            If the number is a multiple of both <strong>3</strong> & <strong>5</strong>,
+                            display <strong>"Patchwork"</strong>.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Instructions</h2>
+                        <p>
+                            Enter a starting value in the first input box. Then enter a value
+                            in the second input box. Press the button and watch the magic happen.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="col border-start border-2">
+                    <form class="row">
+                        <div class="col-12">
+                            <h4 class="border-bottom b-2">Enter Values</h4>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input value="1" id="firstNum" type="number" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input value="100" id="secondNum" type="number" class="form-control">
+                        </div>
+                        <div class="mt-2 d-flex justify-content-center">
+                            <button id="submitBtn" type="button" class="btn btn-dark me-3">Display Patchwork</button>
+                            <button id="clearBtn" type="button" class="btn btn-outline-primary">Clear Patchwork</button>
+                        </div>
+                    </form>
+                    <div class="col mt-5">
+                        <h2 class="border-bottom border-2">Results</h2>
+                        <table class="table table-responsive table-striped">
+                            <tbody id="tableReveal">
+                                <!-- Content to be revealed goes here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -67,7 +114,8 @@
     <footer class="footer mt-auto py-3 sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-md-3 gy-2">
-                <div class="col order-last order-md-first align-items-center d-flex justify-content-center justify-content-md-start text-light" style="font-size: .8em;">
+                <div class="col order-last order-md-first align-items-center d-flex justify-content-center justify-content-md-start text-light"
+                    style="font-size: .8em;">
                     <div>
                         <span class="text-muted">&copy;2021</span> Chris Hartsell | chris.hartsell@outlook.com
                     </div>
@@ -77,9 +125,12 @@
                 </div>
                 <div class="col align-items-center d-flex justify-content-center justify-content-md-end">
                     <div class="row">
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                        </div>
+                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,6 +146,10 @@
     </script>
     <!-- Link to External JS -->
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", operationPatchwork);
+        document.getElementById("clearBtn").addEventListener("click", clearPatchwork);
+    </script>
 </body>
 
 </html>
