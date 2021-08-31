@@ -98,18 +98,14 @@ function displayPatchworkB(firstNum, secondNum){
         // Selects all "td" elements inside of tableRow and stores it as an array
         let rowCols = tableRow.querySelectorAll("td");
     
-        rowCols[0].textContent = (i <= secondNum) ? checkMod(i) : "";
-        rowCols[0].classList.add(rowCols[0].textContent);
-        rowCols[1].textContent = (i + 1 <= secondNum) ? checkMod(i + 1) : "";
-        rowCols[1].classList.add(rowCols[1].textContent);
-        rowCols[2].textContent = (i + 2 <= secondNum) ? checkMod(i + 2) : "";
-        rowCols[2].classList.add(rowCols[2].textContent);
-        rowCols[3].textContent = (i + 3 <= secondNum) ? checkMod(i + 3) : "";
-        rowCols[3].classList.add(rowCols[3].textContent);
-        rowCols[4].textContent = (i + 4 <= secondNum) ? checkMod(i + 4) : "";
-        rowCols[4].classList.add(rowCols[4].textContent);
         
-    
+        for (let j = 0; j < 5; j++){
+            rowCols[j].textContent = (i + j <= secondNum) ? checkMod(i + j) : "";
+            if (rowCols[j].textContent){
+                rowCols[j].classList.add(rowCols[j].textContent);
+            }
+        }
+
         // Adds the content of the cloned node tableRow to the tableBody's element
         tableBody.appendChild(tableRow);
         
