@@ -75,3 +75,15 @@ main>.container {
     bottom: 0;
     width: 100%;
 }
+
+.Patch {
+    color: #0d6efd;
+}
+
+.work {
+    color: #dc3545;
+}
+
+.Patchwork {
+    color: #198754;
+}

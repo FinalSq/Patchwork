@@ -93,7 +93,8 @@
                             <input value="100" id="secondNum" type="number" class="form-control">
                         </div>
                         <div class="mt-2 d-flex justify-content-center">
-                            <button id="submitBtn" type="button" class="btn btn-dark me-3">Display Patchwork</button>
+                            <button id="submitBtnA" type="button" class="btn btn-outline-warning me-3">Display Patchwork A</button>
+                            <button id="submitBtnB" type="button" class="btn btn-outline-danger me-3">Display Patchwork B</button>
                             <button id="clearBtn" type="button" class="btn btn-outline-primary">Clear Patchwork</button>
                         </div>
                     </form>
@@ -137,6 +138,21 @@
         </div>
     </footer>
 
+
+
+    <template id="tableTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+
+
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -147,9 +163,12 @@
     <!-- Link to External JS -->
     <script src="/js/site.js"></script>
     <script>
-        document.getElementById("submitBtn").addEventListener("click", operationPatchwork);
+        document.getElementById("submitBtnA").addEventListener("click", operationPatchworkA);
+        document.getElementById("submitBtnB").addEventListener("click", operationPatchworkB);
+
         document.getElementById("clearBtn").addEventListener("click", clearPatchwork);
     </script>
+
 </body>
 
 </html>
